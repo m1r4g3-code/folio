@@ -98,11 +98,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff-m);min-height:1
 
 .book-info{padding:.72rem;}
 .book-author{font-size:.54rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.22rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.book-title{font-family:var(--ff-d);font-size:.9rem;font-weight:400;line-height:1.2;margin-bottom:.25rem;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;color:var(--text);}
+.book-title{font-family:var(--ff-d);font-size:.9rem;font-weight:400;line-height:1.2;margin-bottom:.25rem;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;color:var(--text);}
 .book-subjects{font-size:.54rem;color:var(--muted);letter-spacing:.03em;margin-bottom:.22rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .book-dl{font-size:.52rem;color:var(--muted);letter-spacing:.05em;}
 .fic-fandom{font-size:.54rem;color:var(--ao3);letter-spacing:.05em;margin-bottom:.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.fic-tags{font-size:.52rem;color:var(--muted);letter-spacing:.03em;margin-bottom:.25rem;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.fic-tags{font-size:.52rem;color:var(--muted);letter-spacing:.03em;margin-bottom:.25rem;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;}
 .fic-meta{display:flex;gap:.5rem;align-items:center;}
 .fic-words{font-size:.5rem;color:var(--muted);letter-spacing:.06em;}
 .fic-kudos{font-size:.5rem;color:#f472b6;letter-spacing:.06em;}
@@ -287,24 +287,29 @@ const CLASSICS = [
 ];
 
 const FANFICS = [
-  {title:"Manacled",author:"senlinyu",fandom:"Harry Potter",genre:["fanfic","darkromance","romance"],words:"370k words",rating:"Explicit",tags:"Dark · Dystopia · Dramione",url:"https://archiveofourown.org/works/20272916",kudos:"560k+"},
+  {title:"Isolation",author:"Bex-chan",fandom:"Harry Potter",genre:["fanfic","darkromance","romance"],words:"173k words",rating:"Mature",tags:"Dramione · Slow Burn · Enemies to Lovers",url:"https://archiveofourown.org/works/386285",kudos:"120k+"},
   {title:"All the Young Dudes",author:"MsKingBean89",fandom:"Harry Potter",genre:["fanfic","romance","drama"],words:"526k words",rating:"Mature",tags:"Marauders Era · Wolfstar · Found Family",url:"https://archiveofourown.org/works/10057010",kudos:"430k+"},
   {title:"The Debt of Time",author:"ShayaLonnie",fandom:"Harry Potter",genre:["fanfic","romance","adventure"],words:"715k words",rating:"Mature",tags:"Time Travel · Dramione · War",url:"https://archiveofourown.org/works/3401228",kudos:"160k+"},
-  {title:"Secrets and Masks",author:"Various Authors",fandom:"Harry Potter",genre:["fanfic","mystery","romance"],words:"Varies",rating:"Teen+",tags:"Identity Reveal · Mystery · Drama",url:"https://archiveofourown.org/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works",kudos:"Varies"},
-  {title:"The Life and Times",author:"Jewels5",fandom:"Harry Potter",genre:["fanfic","romance","drama"],words:"613k words",rating:"Mature",tags:"Marauders Era · Jily · Incomplete",url:"https://www.fanfiction.net/s/5200789/1/The-Life-and-Times",kudos:"Massive"},
+  {title:"The Life and Times",author:"Jewels5",fandom:"Harry Potter",genre:["fanfic","romance","drama"],words:"613k words",rating:"Mature",tags:"Marauders Era · Jily · Legendary",url:"https://www.fanfiction.net/s/5200789/1/The-Life-and-Times",kudos:"Massive"},
   {title:"A Cure for Boredom",author:"emmagrant01",fandom:"Sherlock BBC",genre:["fanfic","romance","drama"],words:"81k words",rating:"Explicit",tags:"Johnlock · Experiments · Friends to Lovers",url:"https://archiveofourown.org/works/502770",kudos:"75k+"},
-  {title:"The Secret Obsession",author:"Various",fandom:"Multiple Fandoms",genre:["fanfic","darkromance","romance"],words:"Varies",rating:"Mature",tags:"Obsession · Dark Romance · Possessive",url:"https://archiveofourown.org/search?work_search[query]=secret+obsession&work_search[sort_column]=kudos_count",kudos:"Varies"},
   {title:"Twist and Shout",author:"gabriel & standbyme",fandom:"Supernatural",genre:["fanfic","romance","drama"],words:"97k words",rating:"Explicit",tags:"Destiel · Historical · Tragedy",url:"https://archiveofourown.org/works/521518",kudos:"180k+"},
   {title:"What the Water Gave Me",author:"slexenskee",fandom:"Harry Potter",genre:["fanfic","mystery","darkromance"],words:"136k words",rating:"Mature",tags:"Dark · Time Travel · Tom Riddle",url:"https://archiveofourown.org/works/848891",kudos:"55k+"},
-  {title:"I Am What I Am",author:"Lokiismycopilot",fandom:"Marvel / Avengers",genre:["fanfic","romance","drama"],words:"120k+ words",rating:"Mature",tags:"Loki · Identity · Redemption",url:"https://archiveofourown.org/users/Lokiismycopilot/works",kudos:"High"},
-  {title:"Nineteen Years Later",author:"calypso_hearts",fandom:"Harry Potter",genre:["fanfic","drama","romance"],words:"200k+ words",rating:"Teen+",tags:"Next Gen · Post-War · Found Family",url:"https://archiveofourown.org/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?work_search[query]=nineteen+years+later",kudos:"High"},
-  {title:"Make Me Bad",author:"Various Dark Romance Authors",fandom:"Multiple",genre:["fanfic","darkromance","romance"],words:"Varies",rating:"Explicit",tags:"Dark Romance · Morally Grey · Obsession",url:"https://archiveofourown.org/search?work_search[query]=dark+romance+obsession&work_search[sort_column]=kudos_count",kudos:"Varies"},
+  {title:"Handle With Care",author:"tygermine",fandom:"Harry Potter",genre:["fanfic","romance","drama"],words:"90k words",rating:"Mature",tags:"Dramione · Slow Burn · Post-War",url:"https://archiveofourown.org/works/11825987",kudos:"40k+"},
+  {title:"The Changeling",author:"Annerb",fandom:"Harry Potter",genre:["fanfic","drama","adventure"],words:"228k words",rating:"Teen+",tags:"Ginny-centric · War · Character Study",url:"https://archiveofourown.org/works/926802",kudos:"35k+"},
+  {title:"Love in the Time of Voldemort",author:"thehouseofhale",fandom:"Harry Potter",genre:["fanfic","romance","drama"],words:"100k+ words",rating:"Mature",tags:"Dramione · Enemies to Lovers · War",url:"https://archiveofourown.org/works/8220828",kudos:"50k+"},
+  {title:"Stained Glass Windows",author:"fictionalcandie",fandom:"Harry Potter",genre:["fanfic","darkromance","romance"],words:"180k words",rating:"Mature",tags:"Dark Romance · Dramione · Obsession",url:"https://archiveofourown.org/works/29901578",kudos:"45k+"},
+  {title:"Make Me Bad (Dark Romance Search)",author:"Various",fandom:"Multiple",genre:["fanfic","darkromance","romance"],words:"Varies",rating:"Explicit",tags:"Dark Romance · Morally Grey · Obsession",url:"https://archiveofourown.org/search?work_search%5Bquery%5D=dark+romance&work_search%5Bsort_column%5D=kudos_count",kudos:"Varies"},
+  {title:"Matryoshka",author:"Takes_On_To_Know_One",fandom:"Original Work",genre:["fanfic","darkromance","mystery"],words:"See AO3",rating:"Mature",tags:"Original · Dark · Psychological",url:"https://archiveofourown.org/works/37068109",kudos:"—"},
+  {title:"Defiance",author:"an0neemouse",fandom:"Original Work",genre:["fanfic","darkromance","romance"],words:"See AO3",rating:"Mature",tags:"Original · Dark Romance",url:"https://archiveofourown.org/works/52586731",kudos:"—"},
+  {title:"My Strange Addiction",author:"EvylineRue",fandom:"Original Work",genre:["fanfic","darkromance","romance"],words:"See AO3",rating:"Mature",tags:"Original · Obsession · Dark Romance",url:"https://archiveofourown.org/works/34373044",kudos:"—"},
+  {title:"The Stolen Nanny",author:"Sara_Finch",fandom:"Original Work",genre:["fanfic","darkromance","romance"],words:"See AO3",rating:"Mature",tags:"Original · Dark Romance · Possessive",url:"https://archiveofourown.org/works/85277091",kudos:"—"},
+  {title:"Carve Me With Your Love",author:"moonshea",fandom:"Original Work",genre:["fanfic","darkromance","romance"],words:"See AO3",rating:"Mature",tags:"Original · Dark Romance · Intensity",url:"https://archiveofourown.org/works/63040948",kudos:"—"},
 ];
 
 const CLASSIC_GENRES = ["","fiction","mystery","horror","adventure","romance","philosophy","science","history","poetry"];
 const CLASSIC_LABELS = ["All","Fiction","Mystery","Horror","Adventure","Romance","Philosophy","Science","History","Poetry"];
-const FIC_FILTERS_V = ["","Harry Potter","Sherlock BBC","Supernatural","Marvel / Avengers","darkromance"];
-const FIC_FILTERS_L = ["All Fandoms","Harry Potter","Sherlock","Supernatural","Marvel","Dark Romance"];
+const FIC_FILTERS_V = ["","Harry Potter","Sherlock BBC","Supernatural","Original Work","darkromance"];
+const FIC_FILTERS_L = ["All Fandoms","Harry Potter","Sherlock","Supernatural","Original","Dark Romance"];
 
 let currentTab = "classics";
 let currentGenre = "";
